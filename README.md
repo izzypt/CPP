@@ -27,7 +27,7 @@ The evolution of C++ standards is driven by the ISO C++ committee, which consist
 - [NameSpaces](#namespaces)
 - [Const](#const)
 - [Typedef and aliases](#typedef)
-- Classes
+- [Classes](#oop)
 - Member Functions
 - Stdio Streams
 - Initialization Lists
@@ -103,3 +103,66 @@ Nowadays, the keyword ```typedef``` has been largely replaced with the ```using`
 
 
 - This would do the same job
+
+<a id="oop"></a>
+# Classes and Objects
+
+<ins>Classes</ins>:
+- Blueprints from which objects are created.
+- A user defined data type.
+- It has attributes (data)
+- It has methods (functions)
+- Able to hide data and methods
+- Provides a publid interface
+
+<ins>Objects</ins>:
+- Created from a class
+- Represents an instance of a class
+
+
+## Declaring a class
+
+```
+class Class_Name
+{
+   //declartion(s);
+}
+```
+
+Let's say we wanted to create a player class :
+
+```
+class Player
+{
+    //attributes
+    std::string name;
+    int health;
+    int xp;
+
+    //methods
+    void talk(std::string text_to_say);
+    bool is_dead(void);
+}
+```
+
+## Creating objects
+
+If we use the class we created above, creeating an object would be something like:
+
+
+Approach 1 : Declared just like primitive data types.
+
+```
+Player frank;
+Player hero;
+```
+
+Approach 2 : 
+- We can also create pointer to objects using the ```new``` keyword. 
+- We declare enemy as a pointer to a Player object.
+- The ```new``` keyword, dynamically allocated memory on the heap for the player object. This memory must be freed.
+- To release the memory allocated with ```new```, you need to use the ```delete``` keyword.
+```
+Player *enemy = new Player();
+delete enemy;
+```
