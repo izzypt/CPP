@@ -27,13 +27,13 @@ The evolution of C++ standards is driven by the ISO C++ committee, which consist
 - [NameSpaces](#namespaces)
 - [Const](#const)
 - [Typedef and aliases](#typedef)
+- [Arrays and Vectors](#arraysandvectors)
 - [Classes](#oop)
 - Member Functions
 - Stdio Streams
 - Initialization Lists
 - Static
 - Structure of a C++ Program
-- Arrays and Vectors
 - Strings in C++
 - Pointers and References
 - OOP - Classes and Objects
@@ -104,6 +104,18 @@ Nowadays, the keyword ```typedef``` has been largely replaced with the ```using`
 
 - This would do the same job
 
+<a id="arraysandvectors"></a>
+# Arrays and vectors
+
+Those are compound types because they are made of another data types.
+
+<ins>Arrays</ins>: A data structure that can hold mutiple values acessed by an index number.
+- Collection of elements.
+- All elements are of the same type.
+- Each element can be accessed directly.
+
+
+
 <a id="oop"></a>
 # Classes and Objects
 
@@ -145,6 +157,21 @@ class Player
 }
 ```
 
+Another example. let's say we wanted to create an Account class:
+
+```
+class Account
+{
+      // Attributes
+      std::string name;
+      double balance;
+
+      // Methods
+      bool withdraw(double amount);
+      bool deposit(double amount);
+}
+```
+
 ## Creating objects
 
 If we use the class we created above, creeating an object would be something like:
@@ -153,8 +180,8 @@ If we use the class we created above, creeating an object would be something lik
 Approach 1 : Declared just like primitive data types.
 
 ```
-Player frank;
-Player hero;
+      Player frank;
+      Player hero;
 ```
 
 Approach 2 : 
@@ -165,4 +192,19 @@ Approach 2 :
 ```
 Player *enemy = new Player();
 delete enemy;
+```
+
+Now, let's say we wanted to create objects for our account class :
+
+Approach 1:
+
+```
+      Account frank_account;
+      Account jim_account;
+```
+Approach 2:
+
+```
+      Account *marry_account = new Account();
+      delete mary_account;
 ```
