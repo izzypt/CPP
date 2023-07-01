@@ -1,6 +1,9 @@
 # CPP
 This is a repo that holds the basics and functionalities of CPP. It serves as the foundation for the future CPP modules repos.
 
+![image](https://github.com/izzypt/CPP/assets/73948790/279b4bc2-f369-44dc-95e3-4828bb67460d)
+
+
 # Table of Contents
 
 - [NameSpaces](#namespaces)
