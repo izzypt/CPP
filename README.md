@@ -114,6 +114,7 @@ Those are compound types because they are made of another data types.
 - All elements are of the same type.
 - Each element can be accessed directly.
 
+![image](https://github.com/izzypt/CPP/assets/73948790/3f7ea465-6d20-4393-82c4-197c21702c5e)
 
 
 <a id="oop"></a>
