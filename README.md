@@ -5,6 +5,7 @@ This is a repo that holds the basics and functionalities of CPP. It serves as th
 
 - [NameSpaces](#namespaces)
 - [Const](#const)
+- [Typedef and aliases](#typedef)
 - Classes
 - Member Functions
 - Stdio Streams
@@ -50,3 +51,25 @@ To create a constant variable, just preceed the datatype declaration of the vari
 ![image](https://github.com/izzypt/CPP/assets/73948790/b20b25d3-a640-4b04-b619-4ffb120c1ad0)
 
 ![image](https://github.com/izzypt/CPP/assets/73948790/f4d89687-ea21-45fd-8f7a-6c63f59bd3f1)
+
+<a id="typedef"></a>
+# Typedef and aliases 
+
+- ```typedef``` is  a reserved keyword used to create a new datatype or an additional name (alias) for an existing data type.
+- It helps with readbility and reduces types.
+
+![image](https://github.com/izzypt/CPP/assets/73948790/7d9b8de9-2ab5-4666-ae27-7c30d18b56d0)
+
+- In the picture above, we create the type ```text_t``` which is the same as referencing ```std::string```.
+
+Another example would be :
+
+![image](https://github.com/izzypt/CPP/assets/73948790/f1b8f7ee-5d47-4e3c-9203-782d72232676)
+
+Nowadays, the keyword ```typedef``` has been largely replaced with the ```using``` keyword. (works bettwer w/ templates)
+
+
+![image](https://github.com/izzypt/CPP/assets/73948790/391964bb-5d1b-4697-bd1a-6a539316fab8)
+
+
+- This would do the same job
