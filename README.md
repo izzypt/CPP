@@ -1,5 +1,7 @@
 # CPP
-This is a repo that holds the basics and functionalities of CPP. It serves as the foundation for the future CPP modules repos.
+This is a repo that holds the fundamental information on CPP. It serves as the base for the future CPP modules repos.
+
+# Intro
 
 ![image](https://github.com/izzypt/CPP/assets/73948790/279b4bc2-f369-44dc-95e3-4828bb67460d)
 
@@ -30,7 +32,16 @@ The evolution of C++ standards is driven by the ISO C++ committee, which consist
 - Stdio Streams
 - Initialization Lists
 - Static
-- ...
+- Structure of a C++ Program
+- Arrays and Vectors
+- Strings in C++
+- Pointers and References
+- OOP - Classes and Objects
+- Polymorphism
+- Smart Pointers
+- Standard Template Library (STL)
+- I/O Stream
+- Exception Handling
 
 # Usefull references
 
