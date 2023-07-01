@@ -3,6 +3,19 @@ This is a repo that holds the basics and functionalities of CPP. It serves as th
 
 ![image](https://github.com/izzypt/CPP/assets/73948790/279b4bc2-f369-44dc-95e3-4828bb67460d)
 
+C++ is a programming language that has evolved over time, and different versions, or standards, have been released to introduce new features, improve the language, and ensure compatibility across different implementations. Here's an overview of the major C++ standards:
+
+- C++98: The first standardized version of C++ was known as C++98, released in 1998. This version introduced features like namespaces, exceptions, templates, and the Standard Template Library (STL).
+
+- C++11: Released in 2011, C++11 was a major update to the language. It introduced numerous new features, including lambda expressions, smart pointers, range-based for loops, type inference (using the auto keyword), and the constexpr keyword. C++11 aimed to modernize the language and make it more expressive and efficient.
+
+- C++14: Was released in 2014 as a minor update to C++11. It added several small features and improvements, such as binary literals, generic lambdas, relaxed constexpr restrictions, and improved support for variable templates. The focus of C++14 was on refining and enhancing the language rather than introducing major changes.
+
+- C++17: C++17  was released in 2017. It brought several significant features, including structured bindings, if constexpr, constexpr lambdas, inline variables, and a simplified std::variant type. C++17 also introduced parallel algorithms in the STL, filesystem support, and other library enhancements.
+
+- C++20: Released in 2020, C++20 introduced many new features and enhancements. Some notable additions include concepts (a way to specify type requirements), ranges (a new library for working with sequences of values), coroutines, three-way comparisons, and modules (a new way to organize and manage code). C++20 aimed to improve code readability, simplify common tasks, and provide better support for modern programming techniques.
+
+The evolution of C++ standards is driven by the ISO C++ committee, which consists of experts from academia, industry, and the broader C++ community.
 
 # Table of Contents
 
