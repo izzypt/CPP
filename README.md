@@ -1,5 +1,5 @@
 # CPP
-This is a repo that holds the fundamental information on CPP. It serves as the base for the future CPP modules repos.
+This is a repo that holds the fundamentals to start working on the CPP modules ahead.
 
 # Intro
 
@@ -29,7 +29,7 @@ The evolution of C++ standards is driven by the ISO C++ committee, which consist
 - [Typedef and aliases](#typedef)
 - [Arrays and Vectors](#arraysandvectors)
 - [Classes](#oop)
-- Member Functions
+- [Member Attribute and Member Functions](#members)
 - Stdio Streams
 - Initialization Lists
 - Static
@@ -209,3 +209,6 @@ Approach 2:
       Account *marry_account = new Account();
       delete mary_account;
 ```
+
+<a href="#members"></a>
+# Member Attributes and Member Functions
