@@ -27,21 +27,16 @@ The evolution of C++ standards is driven by the ISO C++ committee, which consist
 - [NameSpaces](#namespaces)
 - [Const](#const)
 - [Typedef and aliases](#typedef)
+- Stdio Streams
 - [Arrays and Vectors](#arraysandvectors)
 - [Classes](#oop)
 - [Member Attribute and Member Functions](#members)
-- Stdio Streams
 - Initialization Lists
 - Static
 - Structure of a C++ Program
 - Strings in C++
 - Pointers and References
-- OOP - Classes and Objects
-- Polymorphism
-- Smart Pointers
 - Standard Template Library (STL)
-- I/O Stream
-- Exception Handling
 
 # Usefull references
 
