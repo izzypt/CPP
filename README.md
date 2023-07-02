@@ -212,3 +212,72 @@ Approach 2:
 
 <a href="#members"></a>
 # Member Attributes and Member Functions
+
+- Member attributes, also known as member variables or instance variables, are the data elements associated with an object.
+- They represent the characteristics or properties that define the object's state.
+- These attributes hold values that are unique to each object of a class.
+
+>For example, in a Person class, member attributes could include the person's name, age, and address.
+
+>Each instance of the Person class will have its own set of attribute values, allowing you to store and access specific data associated with each person object.
+
+____________________________________________________________________________________________________________
+
+- Member functions, also known as methods, are the actions or behaviors that objects of a class can perform.
+- These functions are associated with the class and operate on its member attributes.
+- They encapsulate the logic and operations that manipulate the data and provide functionality to the objects.
+
+>Continuing with the Person class example, member functions could include methods like setName(), setAge(), and getAddress(). These functions allow you to modify or retrieve the attribute values of a Person object.
+
+>Member functions are defined within the class definition and can access the member attributes of the class. They can perform computations, validate data, modify the object's state, or return information based on the object's attributes.
+
+```
+#include <iostream>
+#include <string>
+
+class Person {
+private:
+    std::string name;
+    int age;
+    std::string address;
+
+public:
+    void setName(const std::string& newName) {
+        this->name = newName;
+    }
+
+    void setAge(int newAge) {
+        this->age = newAge;
+    }
+
+    void setAddress(const std::string& newAddress) {
+        this->address = newAddress;
+    }
+
+    std::string getName() const {
+        return this->name;
+    }
+
+    int getAge() const {
+        return this->age;
+    }
+
+    std::string getAddress() const {
+        return this->address;
+    }
+};
+
+int main() {
+    Person person1;
+    person1.setName("John");
+    person1.setAge(30);
+    person1.setAddress("123 Main St");
+
+    std::cout << "Name: " << person1.getName() << std::endl;
+    std::cout << "Age: " << person1.getAge() << std::endl;
+    std::cout << "Address: " << person1.getAddress() << std::endl;
+
+    return 0;
+}
+
+```
