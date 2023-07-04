@@ -27,7 +27,7 @@ The evolution of C++ standards is driven by the ISO C++ committee, which consist
 - [NameSpaces](#namespaces)
 - [Const](#const)
 - [Typedef and aliases](#typedef)
-- Stdio Streams
+- [Stdio Streams](#iostreams)
 - [Arrays and Vectors](#arraysandvectors)
 - [Classes](#oop)
 - [Member Attribute and Member Functions](#members)
@@ -98,6 +98,90 @@ Nowadays, the keyword ```typedef``` has been largely replaced with the ```using`
 
 
 - This would do the same job
+
+<a id="iostreams"></a>
+# Stdio Streams
+
+Let's explore the iostream library in more detail, focusing on the stream insertion (<<) and stream extraction (>>) operators, as well as formatting options using manipulators.
+
+1. Stream Insertion (<<) Operator:
+The stream insertion operator (<<) is used for output operations in C++. It allows us to insert data into an output stream, typically std::cout, to be displayed on the console or redirected to another output destination.
+
+Example:
+```cpp
+int number = 10;
+std::string message = "Hello, world!";
+
+std::cout << "The number is: " << number << std::endl;
+std::cout << message << std::endl;
+```
+In this example, we use the << operator to insert the value of `number` and the string `message` into the std::cout stream. The output will be:
+```
+The number is: 10
+Hello, world!
+```
+
+2. Stream Extraction (>>) Operator:
+The stream extraction operator (>>) is used for input operations in C++. It allows us to extract data from an input stream, typically std::cin, to store it in variables for further processing.
+
+Example:
+```cpp
+int age;
+std::string name;
+
+std::cout << "Enter your age: ";
+std::cin >> age;
+
+std::cout << "Enter your name: ";
+std::cin >> name;
+
+std::cout << "Welcome, " << name << "! You are " << age << " years old." << std::endl;
+```
+In this example, we use the >> operator to extract the user's age and name from the std::cin stream. The input provided by the user is stored in the variables `age` and `name`, which are then used for output.
+
+3. Formatting Options with Manipulators:
+Manipulators in C++ allow us to modify the format and behavior of the output stream. The iostream library provides several useful manipulators to control various aspects of output formatting. Here are some commonly used manipulators:
+
+- setw: Sets the width of the field for the next output value.
+```cpp
+#include <iomanip>
+
+int number = 42;
+std::cout << "The number is: " << std::setw(5) << number << std::endl;
+```
+Output:
+```
+The number is:    42
+```
+
+- setprecision: Sets the precision (number of decimal places) for floating-point values.
+```cpp
+#include <iomanip>
+
+double pi = 3.14159;
+std::cout << "The value of pi is: " << std::setprecision(3) << pi << std::endl;
+```
+Output:
+```
+The value of pi is: 3.14
+```
+
+- fixed: Forces floating-point values to be displayed in fixed-point notation.
+```cpp
+#include <iomanip>
+
+double number = 123.456789;
+std::cout << "The number is: " << std::fixed << number << std::endl;
+```
+Output:
+```
+The number is: 123.456789
+```
+
+These manipulators, along with many others available in the iostream library, provide greater control over the appearance and formatting of the output, making it easier to present data in a desired format.
+
+By combining the stream insertion (<<) and stream extraction (>>) operators with manipulators, we can perform a wide range of input and output operations while maintaining control over the format and presentation of data.
+
 
 <a id="arraysandvectors"></a>
 # Arrays and vectors
