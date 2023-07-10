@@ -407,9 +407,8 @@ It is particularly useful for initializing member variables that are of non-defa
 By using an initialization list, you ensure that the member variables are properly initialized before the constructor body is executed, providing a clean and efficient way to initialize your class's member variables.
 
 
-
-
 <a id="#pointersandreferences"></a>
+
 # Pointers and References
 
 Pointers:
