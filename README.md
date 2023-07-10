@@ -441,3 +441,5 @@ When to use references:
 - When implementing operator overloading to provide a more intuitive syntax.
 
 It's worth noting that references can also be used in certain cases where pointers are used, but references offer a safer and more convenient alternative when there is no need for the flexibility provided by pointers.
+
+This video also explains more about it : https://www.youtube.com/watch?v=wro8Bb6JnwU&ab_channel=LowLevelLearning
