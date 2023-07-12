@@ -36,6 +36,7 @@ The evolution of C++ standards is driven by the ISO C++ committee, which consist
 - Structure of a C++ Program
 - Strings in C++
 - [Pointers and References](#pointersandreferences)
+- [Passing by value or reference](#valueorreference)
 - Standard Template Library (STL)
 
 # Usefull references
@@ -441,5 +442,57 @@ When to use references:
 - When implementing operator overloading to provide a more intuitive syntax.
 
 It's worth noting that references can also be used in certain cases where pointers are used, but references offer a safer and more convenient alternative when there is no need for the flexibility provided by pointers.
+
+<a id="valueorreference"></a>
+# Passing by value or reference
+
+Passing data between functions or objects in C++ can be done either by value or by reference.
+
+1. Passing by Value:
+   - When passing data by value, a copy of the data is made and passed to the function or object. Any modifications made to the copied data within the function or object do not affect the original data in the calling context.
+
+      Example:
+   
+      ```cpp
+      void increment(int value) {
+          value++;  // Increment the copied value
+      }
+   
+      int main() {
+          int num = 5;
+          increment(num);
+          // The value of 'num' remains unchanged (still 5)
+          return 0;
+      }
+      ```
+   
+      In the example above, the function `increment` takes an integer parameter `value` by value. Any changes made to `value` inside the function do not affect the original `num` variable in `main()`. This method is useful when you want to work with a local copy of the data without modifying the original value.
+
+3. Passing by Reference:
+   - When passing data by reference, instead of making a copy, a reference or pointer to the original data is passed. This allows the function or object to directly access and modify the original data.
+
+      Example:
+   
+      ```cpp
+      void increment(int& value) {
+          value++;  // Increment the original value
+      }
+   
+      int main() {
+          int num = 5;
+          increment(num);
+          // The value of 'num' is modified to 6
+          return 0;
+      }
+      ```
+   
+      In this example, the function `increment` takes an integer reference `value`. Any modifications made to `value` inside the function directly affect the original `num` variable in `main()`. This method is useful when you want to modify the original data or avoid making unnecessary copies of large objects.
+
+Implications:
+
+- Passing by value: Creating a copy of the data can have performance implications, especially for large objects or when called frequently. However, it ensures data immutability and avoids unintended side effects on the original data.
+- Passing by reference: It allows direct modification of the original data and can be more efficient for large objects. However, it requires caution since modifications made inside the function affect the original data, potentially leading to unexpected behavior.
+
+In general, passing by value is suitable for small, immutable data types, while passing by reference is more efficient for larger objects that need modification. The choice between the two methods depends on the specific requirements of the program and the desired behavior when interacting with data.
 
 This video also explains more about it : https://www.youtube.com/watch?v=wro8Bb6JnwU&ab_channel=LowLevelLearning
