@@ -26,13 +26,13 @@ The evolution of C++ standards is driven by the ISO C++ committee, which consist
 
 - [NameSpaces](#namespaces)
 - [Const](#const)
+- [Static](#static)
 - [Typedef and aliases](#typedef)
 - [Stdio Streams](#iostreams)
 - [Arrays and Vectors](#arraysandvectors)
 - [Classes](#oop)
 - [Member Attribute and Member Functions](#members)
 - [Initialization Lists](#initializationlist)
-- Static
 - Strings in C++
 - [Pointers and References](#pointersandreferences)
 - [Passing by value or reference](#valueorreference)
@@ -76,6 +76,77 @@ To create a constant variable, just preceed the datatype declaration of the vari
 ![image](https://github.com/izzypt/CPP/assets/73948790/b20b25d3-a640-4b04-b619-4ffb120c1ad0)
 
 ![image](https://github.com/izzypt/CPP/assets/73948790/f4d89687-ea21-45fd-8f7a-6c63f59bd3f1)
+
+<a id="static"></a>
+# Static
+
+In C++, the keyword "static" has multiple uses and can be applied to variables, functions, and class members. Here are the main uses of the "static" keyword:
+
+1. Static Variables:
+   When applied to a variable within a function or method, the "static" keyword gives the variable static storage duration. It means that the variable is initialized only once, and its value persists across multiple function calls. The variable retains its value even after the function or method scope is exited.
+
+   ```cpp
+   void countCalls() {
+       static int counter = 0;
+       counter++;
+       cout << "Function called " << counter << " times." << endl;
+   }
+
+   int main() {
+       countCalls();  // Function called 1 times.
+       countCalls();  // Function called 2 times.
+       countCalls();  // Function called 3 times.
+       return 0;
+   }
+   ```
+
+   In the example above, the "counter" variable inside the "countCalls" function is declared as static. It retains its value between function calls and increments with each call. Static variables are often used for maintaining state across function calls or for caching values.
+
+2. Static Functions:
+   When applied to a function, the "static" keyword restricts the function's scope to the translation unit where it is defined. It means the function is not visible outside its source file. Static functions can only be called from other functions within the same file.
+
+   ```cpp
+   static void helperFunction() {
+       // Function implementation
+   }
+
+   void publicFunction() {
+       // Can call helperFunction()
+   }
+
+   int main() {
+       // Cannot call helperFunction() here
+       return 0;
+   }
+   ```
+
+   In the example above, the "helperFunction" is declared as static. It can only be called within the same file, typically for internal implementation details or utility functions not intended to be accessed externally.
+
+3. Static Class Members:
+   When applied to a class member (variable or function), the "static" keyword indicates that the member is associated with the class itself rather than with individual objects of the class. Static class members are shared among all instances of the class.
+
+   ```cpp
+   class MyClass {
+   public:
+       static int count;
+   };
+
+   int MyClass::count = 0;  // Definition and initialization
+
+   int main() {
+       MyClass obj1;
+       MyClass obj2;
+
+       obj1.count = 5;
+       cout << obj2.count << endl;  // Output: 5
+
+       return 0;
+   }
+   ```
+
+   In the example above, the "count" variable is declared as a static member of the "MyClass" class. It is shared by all instances of the class, and modifying it in one instance reflects the change in other instances. Static class members are often used to store shared data or provide utility functions associated with the class itself rather than individual objects.
+
+These are the primary uses of the "static" keyword in C++. It provides various capabilities such as persistent local variables, restricted visibility of functions, and shared data among class instances.
 
 <a id="typedef"></a>
 # Typedef and aliases 
