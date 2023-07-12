@@ -33,7 +33,6 @@ The evolution of C++ standards is driven by the ISO C++ committee, which consist
 - [Member Attribute and Member Functions](#members)
 - [Initialization Lists](#initializationlist)
 - Static
-- Structure of a C++ Program
 - Strings in C++
 - [Pointers and References](#pointersandreferences)
 - [Passing by value or reference](#valueorreference)
