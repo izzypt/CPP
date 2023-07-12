@@ -29,6 +29,7 @@ The evolution of C++ standards is driven by the ISO C++ committee, which consist
 - [Static](#static)
 - [Typedef and aliases](#typedef)
 - [Stdio Streams](#iostreams)
+- [Containers](#containers)
 - [Arrays and Vectors](#arraysandvectors)
 - [Classes](#oop)
 - [Member Attribute and Member Functions](#members)
@@ -253,6 +254,37 @@ These manipulators, along with many others available in the iostream library, pr
 
 By combining the stream insertion (<<) and stream extraction (>>) operators with manipulators, we can perform a wide range of input and output operations while maintaining control over the format and presentation of data.
 
+<a id="containers"></a>
+
+# Containers
+
+In C++, containers are data structures provided by the Standard Template Library (STL) that store and organize collections of objects. 
+
+They are designed to offer different capabilities for storing, accessing, and manipulating data in a generic and efficient manner.
+
+The C++ STL provides several container classes, each with its own characteristics and use cases. The main container types in the STL are:
+
+1. Sequence Containers:
+   - `std::vector`: A dynamic array-like container that provides fast random access and efficient element insertion and deletion at the end.
+   - `std::deque`: Similar to a vector, but allows efficient element insertion and deletion at both ends.
+   - `std::list`: A doubly-linked list that supports efficient insertion and deletion at any position, but sacrifices random access performance.
+
+2. Associative Containers:
+   - `std::set`: A container that stores unique elements in a sorted order. It uses a binary search tree (usually implemented as a red-black tree) to provide efficient searching, insertion, and deletion.
+   - `std::map`: A container that stores key-value pairs, where keys are unique and stored in a sorted order. It offers efficient searching, insertion, and deletion based on the key.
+   - `std::multiset` and `std::multimap`: Similar to `std::set` and `std::map`, respectively, but allow duplicate elements.
+
+3. Unordered Associative Containers:
+   - `std::unordered_set`: A container that stores unique elements using a hash table. It provides constant-time average complexity for insertion, deletion, and searching.
+   - `std::unordered_map`: A container that stores key-value pairs using a hash table. It offers constant-time average complexity for insertion, deletion, and searching based on the key.
+   - `std::unordered_multiset` and `std::unordered_multimap`: Similar to `std::unordered_set` and `std::unordered_map`, respectively, but allow duplicate elements.
+
+4. Container Adapters:
+   - `std::stack`: Implements a Last-In-First-Out (LIFO) data structure by using an underlying container (e.g., `std::deque` or `std::list`).
+   - `std::queue`: Implements a First-In-First-Out (FIFO) data structure using an underlying container (e.g., `std::deque` or `std::list`).
+   - `std::priority_queue`: Provides a priority queue using an underlying container (e.g., `std::vector`).
+
+These container classes provide a wide range of functionalities and allow you to choose the most suitable container for your specific needs. They encapsulate complex data structures and algorithms, making it easier to work with and manipulate data in a generic way. The choice of the container depends on the requirements of your program, including the desired operations, performance characteristics, and memory usage.
 
 <a id="arraysandvectors"></a>
 # Arrays and vectors
