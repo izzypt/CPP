@@ -34,6 +34,7 @@ The evolution of C++ standards is driven by the ISO C++ committee, which consist
 - [Classes](#oop)
 - [Member Attribute and Member Functions](#members)
 - [Initialization Lists](#initializationlist)
+- [Class Acess Specifiers](#accessspecifiers)
 - Strings in C++
 - [Pointers and References](#pointersandreferences)
 - [Passing by value or reference](#valueorreference)
@@ -509,6 +510,66 @@ It is particularly useful for initializing member variables that are of non-defa
 
 By using an initialization list, you ensure that the member variables are properly initialized before the constructor body is executed, providing a clean and efficient way to initialize your class's member variables.
 
+<a id="accessspecifiers"></a>
+
+# Class access specifiers
+
+In object-oriented programming (OOP) with C++, the `public`, `private`, and `protected` keywords are used as access specifiers in a class definition to control the visibility and accessibility of class members (variables and functions) from within the class and its derived classes. These access specifiers define the level of encapsulation and inheritance relationships between classes. Here's a brief explanation of each:
+
+1. `public`:
+
+   Members declared as `public` are accessible from anywhere in the program, including outside the class. They have no access restrictions, meaning they can be accessed freely by any part of the program.
+   
+   Example:
+   ```cpp
+   class MyClass {
+   public:
+       int publicVariable;
+       void publicFunction() { /* ... */ }
+   };
+   ```
+   
+   In this example, `publicVariable` and `publicFunction()` are accessible from any part of the program, even outside the class.
+
+2. `private`:
+   
+   Members declared as `private` are only accessible from within the class itself. They are not accessible from outside the class or its derived classes. This provides strong encapsulation, as the implementation details of the class are hidden from external entities.
+   
+   Example:
+   ```cpp
+   class MyClass {
+   private:
+       int privateVariable;
+       void privateFunction() { /* ... */ }
+   };
+   ```
+   
+   In this example, `privateVariable` and `privateFunction()` can only be accessed and used within the class `MyClass`.
+
+3. `protected`:
+
+   Members declared as `protected` are similar to `private` members, but they are also accessible by derived classes. This means that the derived class can access the protected members of its base class.
+   
+   Example:
+   ```cpp
+   class MyBaseClass {
+   protected:
+       int protectedVariable;
+       void protectedFunction() { /* ... */ }
+   };
+   
+   class MyDerivedClass : public MyBaseClass {
+   public:
+       void accessProtectedMember() {
+           protectedVariable = 42; // Can access protected member from the base class.
+           protectedFunction();    // Can call protected member function from the base class.
+       }
+   };
+   ```
+   
+   In this example, `MyDerivedClass` can access `protectedVariable` and `protectedFunction()` from `MyBaseClass`, but these members are still not accessible outside of the `MyBaseClass` or its derived classes.
+
+To summarize, the access specifiers in C++ allow you to control the visibility of class members, providing a way to enforce data encapsulation and manage class relationships in terms of inheritance. Good design practice often involves making data members private and exposing them through public member functions (getters and setters) to control access to the class's internal state while maintaining data integrity.
 
 <a id="pointersandreferences"></a>
 
