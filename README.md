@@ -64,8 +64,7 @@ But if I specify the namespace of the variable, like this ```<namespace>::variab
 It will return 1 for ```first::x``` and 2 for ```second::x```.
 
 <a id="const"></a>
-# Const
-
+# Const keyword
 - The const keyword specifies that a variable's value is constant.
 - It tells the compiler to prevent anything from modifying it.
 
@@ -74,10 +73,26 @@ To create a constant variable, just preceed the datatype declaration of the vari
 ![image](https://github.com/izzypt/CPP/assets/73948790/97418b8e-581e-415f-b3c0-0d422d6dae7a)
 
 - If at some point you or someone else tries to change the value of ```PI```, the compier will throw an error.
-- 
 ![image](https://github.com/izzypt/CPP/assets/73948790/b20b25d3-a640-4b04-b619-4ffb120c1ad0)
 
 ![image](https://github.com/izzypt/CPP/assets/73948790/f4d89687-ea21-45fd-8f7a-6c63f59bd3f1)
+
+**Constant Member Function:**
+
+- When you place `const` after the function name in the function declaration, it indicates that the member function is a constant member function. 
+- This means that the function promises not to modify the state of the object on which it is called. In other words, it guarantees that the member function will not modify any non-static data members of the class.
+
+   Example:
+   
+   ```cpp
+   class MyClass {
+   public:
+       void foo() const; // Constant member function
+   };
+   ```
+   
+   In this example, `foo()` is a constant member function of the class `MyClass`.
+
 
 <a id="static"></a>
 # Static
