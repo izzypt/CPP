@@ -67,6 +67,7 @@ It will return 1 for ```first::x``` and 2 for ```second::x```.
 # Const keyword
 - The const keyword specifies that a variable's value is constant.
 - It tells the compiler to prevent anything from modifying it.
+- https://www.geeksforgeeks.org/const-keyword-in-cpp/
 
 To create a constant variable, just preceed the datatype declaration of the variable with the ```const``` keyword:
 
