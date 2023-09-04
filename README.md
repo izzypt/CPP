@@ -1,6 +1,8 @@
 # CPP
 This is a repo that holds the fundamentals to start working on the CPP modules ahead.
 
+https://roadmap.sh/cpp
+
 # Intro
 
 ![image](https://github.com/izzypt/CPP/assets/73948790/279b4bc2-f369-44dc-95e3-4828bb67460d)
